@@ -9,7 +9,7 @@ namespace Vaened\TagFinder\Tests;
 
 use PHPUnit\Framework\Attributes\Test;
 use Vaened\TagFinder\ClassFinder;
-use Vaened\TagFinder\Tests\App\Entity;
+use Vaened\TagFinder\Tests\App\Handler;
 
 final class ClassFinderTest extends TestCase
 {
@@ -17,12 +17,12 @@ final class ClassFinderTest extends TestCase
     public function find_tagged_classes_as_entities(): void
     {
         $finder  = new ClassFinder(self::basePath('App'), 'Vaened\\TagFinder\\Tests\\App');
-        $classes = $finder->instancesOf(Entity::class);
-        
+        $classes = $finder->instancesOf(Handler::class);
+
         $this->assertCount(2, $classes);
         $this->assertSame([
-            "/app/tests/App/Products/Product.php"    => "Vaened\TagFinder\Tests\App\Products\Product",
-            "/app/tests/App/Categories/Category.php" => "Vaened\TagFinder\Tests\App\Categories\Category",
+            "/app/tests/App/Products/CreateProductHandler.php"    => "Vaened\TagFinder\Tests\App\Products\CreateProductHandler",
+            "/app/tests/App/Categories/CreateCategoryHandler.php" => "Vaened\TagFinder\Tests\App\Categories\CreateCategoryHandler",
         ], $classes);
     }
 }

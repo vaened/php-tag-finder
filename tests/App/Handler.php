@@ -7,6 +7,6 @@ declare(strict_types=1);
 
 namespace Vaened\TagFinder\Tests\App;
 
-interface Entity
+interface Handler
 {
 }

@@ -7,8 +7,8 @@ declare(strict_types=1);
 
 namespace Vaened\TagFinder\Tests\App\Products;
 
-use Vaened\TagFinder\Tests\App\Entity;
+use Vaened\TagFinder\Tests\App\Handler;
 
-final class Product implements Entity
+final class CreateProductHandler implements Handler
 {
 }
