@@ -4,7 +4,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Vaened\\PhpTagFinder\\": "src/"
+            "Vaened\\TagFinder\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vaened\\TagFinder\\Tests\\": "tests/"
         }
     },
     "authors": [
