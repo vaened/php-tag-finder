@@ -1,0 +1,17 @@
+{
+    "name": "vaened/php-tag-finder",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vaened\\PhpTagFinder\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Enea Dhack",
+            "email": "enea.so@live.com"
+        }
+    ],
+    "require": {}
+}
