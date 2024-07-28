@@ -1,5 +1,8 @@
 # Tag Finder
 
+[![Build Status](https://github.com/vaened/php-tag-finder/actions/workflows/tests.yml/badge.svg)](https://github.com/vaened/php-tag-finder/actions?query=workflow:Tests)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](license)
+
 Library created to simplify the search for PHP classes based on their parent class/interface.
 
 ## Installation
