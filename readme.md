@@ -38,13 +38,13 @@ performed, and the `namespace` that represents that location.
 Let's suppose that the project is called Ecommerce, where the namespace is also `Ecommerce\\`.
 
 ```md
-─── src
-    ├── App
-    │ ├── Categories
-    │ │ └── CreateCategoryHandler.php
-    │ ├─── Products
-    │ │ └── CreateProductHandler.php
-    │ ├── Handler.php
+src
+├── App
+│ ├── Categories
+│ │ └── CreateCategoryHandler.php
+│ ├─── Products
+│ │ └── CreateProductHandler.php
+│ ├── Handler.php
 ```
 
 So, to locate only the classes that correspond to the application, in this case you would have to instantiate the ClassFinder to search
