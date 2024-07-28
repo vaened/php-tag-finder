@@ -39,12 +39,12 @@ Let's suppose that the project is called Ecommerce, where the namespace is also 
 
 ```md
 ─── src
-├── App
-│ ├── Categories
-│ │ └── CreateCategoryHandler.php
-│ ├─── Products
-│ │ └── CreateProductHandler.php
-│ ├── Handler.php
+    ├── App
+    │ ├── Categories
+    │ │ └── CreateCategoryHandler.php
+    │ ├─── Products
+    │ │ └── CreateProductHandler.php
+    │ ├── Handler.php
 ```
 
 So, to locate only the classes that correspond to the application, in this case you would have to instantiate the ClassFinder to search
