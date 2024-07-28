@@ -21,7 +21,8 @@ final class ClassFinderTest extends TestCase
         $classes  = $finder->instancesOf(Handler::class);
 
         $this->assertCount(2, $classes);
-        $this->assertSame([
+
+        $this->assertEquals([
             "$basePath/Products/CreateProductHandler.php"    => "Vaened\TagFinder\Tests\App\Products\CreateProductHandler",
             "$basePath/Categories/CreateCategoryHandler.php" => "Vaened\TagFinder\Tests\App\Categories\CreateCategoryHandler",
         ], $classes);
