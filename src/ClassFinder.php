@@ -17,6 +17,7 @@ use function file_exists;
 use function is_subclass_of;
 use function Lambdish\Phunctional\reduce;
 use function str_replace;
+use function trim;
 
 final class ClassFinder
 {
@@ -79,9 +80,10 @@ final class ClassFinder
 
     private function extract(string $file): string
     {
-        $source = preg_replace('/^\\/|\\/$/', '', $this->source);
-        [, $namespaced] = explode("/$source/", $file);
-        $class = str_replace(['/', '.php'], ['\\', ''], $namespaced);
+        $file   = str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $file);
+        $source = trim($this->source, DIRECTORY_SEPARATOR);
+        [, $namespaced] = explode(DIRECTORY_SEPARATOR . $source . DIRECTORY_SEPARATOR, $file);
+        $class = str_replace([DIRECTORY_SEPARATOR, '.php'], ['\\', ''], $namespaced);
 
         return "$this->namespace\\$class";
     }
