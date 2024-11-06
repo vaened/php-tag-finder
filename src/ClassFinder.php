@@ -82,7 +82,7 @@ final class ClassFinder
     {
         $file   = str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $file);
         $source = trim($this->source, DIRECTORY_SEPARATOR);
-        [, $namespaced] = explode(DIRECTORY_SEPARATOR . $source . DIRECTORY_SEPARATOR, $file);
+        [, $namespaced] = explode($source . DIRECTORY_SEPARATOR, $file);
         $class = str_replace([DIRECTORY_SEPARATOR, '.php'], ['\\', ''], $namespaced);
 
         return "$this->namespace\\$class";
